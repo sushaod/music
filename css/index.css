@@ -6,7 +6,6 @@ html,
 body,
 .main-box {
   height: 100%;
-  z-index: -3;
   overflow: hidden;
 }
 
@@ -71,7 +70,6 @@ h2 {
 }
 
 .header-box>.play-btn {
-  display: none;
   position: absolute;
   top: .3rem;
   right: .3rem;

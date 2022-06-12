@@ -2,6 +2,9 @@ let musicRender = (function () {
   let $headerBox = $('.header-box')
   let $contentBox = $('.content-box')
   let $footerBox = $('.footer-box')
+  let musicaudio = $('#musicaudio')[0]
+  let $play = $('.play-btn')
+  
   let computedContent = function () {
     let winH = document.documentElement.clientHeight,
       font = parseFloat(document.documentElement.style.fontSize)
@@ -33,12 +36,16 @@ let musicRender = (function () {
     })
   }
 
+  let playRun = function playRun(){
+    musicaudio.play()
+  }
+
+  $play.on('click',playRun)
+
   return {
     init: function () {
       computedContent()
-      queryLyric().then(res => {
-        console.log(res.list)
-      })
+     
     }
   }
 })()
