@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>music player</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- <script src="./js/less.min.js"></script> -->
+  <script src="./js/prefixfree.min.js"></script>
+  <script src="./js/zepto.min.js" ></script>
+  <!-- 处理rem -->
+  <script>
+    ~ function anonymous(window) {
+      let conputedREM = function conputedREM() {
+        let winW = document.documentElement.clientWidth,
+          desW = 640
+        if (winW >= desW) {
+          document.documentElement.style.fontSize = '100px'
+          return
+        }
+        document.documentElement.style.fontSize = winW / desW * 100 + 'px'
+      }
+      conputedREM()
+      window.addEventListener('resize', conputedREM)
+    }(window)
+  </script>
+</head>
+
+<body>
+  <main class="main-box">
+    <img src="./img/20220612174548.jpg" alt="" class="background-img">
+    <div class="background-mark"></div>
+
+    <!--     
+      AUDIO 音频标签
+        1、h5中支持的音乐播放格式
+          mp3 OGG WAV
+          支持多个浏览器的写法
+          <audio >
+            <source src="xxx.mp3" type="audio/mpeg">
+            <source src="xxx" type="">
+          </audio>
+          M3U8:直播流文件
+        2、常用属性
+          controls:设置这个属性为true，则浏览器默认的播放器控制
+          autoplay:自动播放
+          loop:播放完成之后是否允许循环播放
+          preload:资源预加载模式（
+                  none开始不加载，播放的时候加载
+                  metadata开始加载一些基础信息
+                  auto加载页面就开始加载资源
+                ）
+     -->
+    <audio src="./audio/美人鱼 - 小阿七.mp3" preload="none" loop></audio>
+
+
+    <header class="header-box">
+      <img src="./img/20220612174811.jpg" alt="" class="pic">
+      <div class="title">
+        <h1>周子鹏（音乐人）</h1>
+        <h2>美国布鲁克音乐学院</h2>
+      </div>
+      <a href="javascript:;" class="play-btn">
+        🎵
+      </a>
+    </header>
+
+    <section class="content-box">
+      <div class="wrapper">
+        <p>周子鹏-zhouzip-live</p>
+      </div>
+    </section>
+
+    <footer class="footer-box">
+      <div class="progress-box">
+        <span class="already">00:00</span>
+        <div class="progress">
+          <div class="current"></div>
+        </div>
+        <span class="duration">03:00</span>
+      </div>
+
+      <a href="javascript:;" class="downloadBtn">
+        下载这首音乐
+      </a>
+    </footer>
+  </main>
+</body>
+<script src="./js/index.js"></script>
+</html>
