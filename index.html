@@ -54,7 +54,7 @@
                   auto加载页面就开始加载资源
                 ）
      -->
-    <audio src="./audio/美人鱼 - 小阿七.mp3" preload="none" loop></audio>
+    <audio id="video" src="./audio/美人鱼 - 小阿七.mp3" preload="none" loop ></audio>
 
 
     <header class="header-box">
@@ -90,4 +90,8 @@
   </main>
 </body>
 <script src="./js/index.js"></script>
+<script async>
+  var v = document.getElementById("#video");
+  v.play();   
+</script>
 </html>
